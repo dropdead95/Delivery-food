@@ -13,9 +13,6 @@ button {
     color: inherit;
 }
 
-.hide {
-    display: none;
-}
 
 .container {
     max-width: 1200px;
@@ -429,7 +426,9 @@ button {
 .is-open {
     display: flex;
 }
-
+.hide {
+    display: none;
+}
 .modal-dialog {
     max-width: 780px;
     width: 95%;
