@@ -26,7 +26,7 @@ export const partners = () => {
         a.addEventListener("click", (e) => {
           e.preventDefault();
           localStorage.setItem("restaurant", JSON.stringify(item));
-          window.location.href = './restaurant.html'
+          window.location.href = '../../restaurant.html'
         });
         cardsRestaurants.append(a);
       }
