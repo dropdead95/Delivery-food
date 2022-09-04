@@ -7,6 +7,7 @@ export const auth = () => {
   const inputPassword = document.getElementById("password");
   const buttonOut = document.querySelector(".button-out");
   const userName = document.querySelector(".user-name");
+  const buttonCart = document.querySelector(".button-cart");
 
   const login = (user) => {
     buttonAuth.classList.add("hide");
@@ -14,14 +15,18 @@ export const auth = () => {
     userName.classList.add("is-open");
     userName.textContent = user.login;
     modalAuth.classList.remove("is-open");
+    buttonCart.classList.add('is-open')
+
   };
 
   const logout = () => {
     buttonAuth.classList.remove("hide");
     userName.classList.remove("is-open");
     buttonOut.classList.remove("is-open");
+    buttonCart.classList.remove('is-open')
     userName.textContent = "";
     localStorage.removeItem("user");
+
   };
 
   buttonAuth.addEventListener("click", () => {
@@ -50,5 +55,4 @@ export const auth = () => {
   if (localStorage.getItem("user")) {
     login(JSON.parse(localStorage.getItem("user")));
   }
-
-}
+};
